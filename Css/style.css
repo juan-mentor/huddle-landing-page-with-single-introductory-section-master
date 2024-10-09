@@ -46,16 +46,17 @@ body {
 
 .hero {
     width: 100%;
+    max-width: 1318px;
     height: 100%;
     color: var(--white); 
+    background-image: url("../images/bg-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: 100% ;
 }
 
 .hero__header {
-    background-image: url("../images/bg-mobile.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
     margin-bottom: 4.3rem;
-    padding:calc(1rem + 7.25vw);
+    padding: calc(1rem + 7.25vw);
 }
 
 .hero__logo {
@@ -63,45 +64,49 @@ body {
     height: 50px;
     background-image: url("../images/logo.svg");
     background-size: cover;
-    margin-bottom: 8.6rem;
+    margin-bottom: 8.7rem;
 }
 
 .hero__image {
     width: 100%;
+    max-width: 695px;
     height: 56vw;
+    max-height: 495px;
     background-image: url("../images/illustration-mockups.svg");
-    background-size: cover;  
+    background-size: contain; 
+    background-repeat: no-repeat; 
 }
 
 .hero__content {
     text-align: center;
     line-height: 1.5;
-    padding-bottom: 4.4rem;
+    padding-bottom: 4.5rem;
+    text-align: center;
 }
 
 .hero__title {
     max-width: 520px;
     font-size:calc(1.4rem + 2.5vw) ;
     margin: 0  auto;
-    text-align: center;
 }
 
 .hero__paragraph {
     font-size:calc(1rem + 1.1vw) ;
     max-width: 526px;
-    margin:3.5rem auto;
+    margin:3.6rem auto;
     letter-spacing: 1px;
     padding: 0 0.625rem;
 }
 
 .hero__btn {
     width: 53%;
-    margin-bottom: 7.75rem;
+    margin-bottom: 7.8rem;
     border: none;
     border-radius: 30px;
     padding: calc(1rem + 2.1vw) 4rem;
     font-size: 1rem;
     letter-spacing: 1px;
+    background-color: #fff;
     color: var(--violet);
     text-align: center;
 }
@@ -121,7 +126,62 @@ body {
     filter: invert(1);
 }
 
-    
+@media screen and (min-width: 75rem) {
+    .hero {
+        display: flex;
+        
+        align-items: flex-end;
+        background-image: url("../images/bg-desktop.svg");
+        background-size: cover;
+        background-position: center;
+    }
+
+    .hero__header {
+        flex-grow: 1;
+        margin-bottom: 0;
+        padding: 3.9rem 4.7rem 5.8rem;
+    }
+
+    .hero__logo {
+        margin-bottom: 6.25rem;
+    }
+
+    .hero__content {
+        text-align: left;
+        padding-left: 0.625rem;
+        padding-right: 0.625rem;
+        padding-bottom: 2.4rem;
+    }
+
+    .hero__title {
+        font-size: 2.1rem;
+        max-width: 435px;
+        margin: 2.4rem 0;
+    }
+
+    .hero__paragraph {
+        font-size: 1rem;
+        max-width: 510px;
+        padding: 0;
+        line-height: 1.8;
+        margin: 1.6rem;
+    }
+
+    .hero__btn {
+        width: 37%;
+        padding: 1.1rem;
+        margin-bottom: 11rem;
+    }
+
+    .hero__icons {
+        
+        justify-content: flex-end;
+    }
+
+    .hero__icon {
+        width: 2.75rem;
+    }
+}  
 
 
 
