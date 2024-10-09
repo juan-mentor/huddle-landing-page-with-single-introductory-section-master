@@ -24,12 +24,16 @@ body {
     font-style: normal;
     font-variation-settings:
       "wdth" 100;
+    width: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: var(--violet);
+     background-image: url("../images/bg-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: 100% ;
 }
 
 .poppins-regular {
@@ -58,7 +62,6 @@ body {
     margin-bottom: 4.3rem;
     padding: calc(1rem + 7.25vw);
 }
-
 .hero__logo {
     width: 250px;
     height: 50px;
@@ -127,13 +130,17 @@ body {
 }
 
 @media screen and (min-width: 75rem) {
+
+    body {
+        background-image: url("../images/bg-desktop.svg");
+        
+        
+    }
+
     .hero {
         display: flex;
         
         align-items: flex-end;
-        background-image: url("../images/bg-desktop.svg");
-        background-size: cover;
-        background-position: center;
     }
 
     .hero__header {
@@ -144,6 +151,7 @@ body {
 
     .hero__logo {
         margin-bottom: 6.25rem;
+        width: 205px;
     }
 
     .hero__content {
