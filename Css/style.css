@@ -3,6 +3,8 @@
     --violet: hsl(257, 40%, 49%);
     --soft-magenta: hsl(300, 69%, 71%);
     --white: hsl(0,100%,100%);
+    --bg-mobile: url("../images/bg-mobile.svg");
+    --bg-desktop: url("../images/bg-desktop.svg");
 }
 
 html {
@@ -31,7 +33,7 @@ body {
     align-items: center;
     justify-content: center;
     background-color: var(--violet);
-     background-image: url("../images/bg-mobile.svg");
+    background-image: var(--bg-mobile);
     background-repeat: no-repeat;
     background-size: 100% ;
 }
@@ -53,20 +55,18 @@ body {
     max-width: 1318px;
     height: 100%;
     color: var(--white); 
-    background-image: url("../images/bg-mobile.svg");
-    background-repeat: no-repeat;
-    background-size: 100% ;
 }
 
 .hero__header {
     margin-bottom: 4.3rem;
     padding: calc(1rem + 7.25vw);
 }
+
 .hero__logo {
     width: 250px;
     height: 50px;
     background-image: url("../images/logo.svg");
-    background-size: cover;
+    background-size: contain;
     margin-bottom: 8.7rem;
 }
 
@@ -130,16 +130,15 @@ body {
 }
 
 @media screen and (min-width: 75rem) {
-
     body {
-        background-image: url("../images/bg-desktop.svg");
-        
-        
+        --bg-mobile: url("../images/bg-desktop.svg");
+        background-image: var(--bg-mobile);
+        background-size: contain;
+        background-position: center right 125px;
     }
 
     .hero {
         display: flex;
-        
         align-items: flex-end;
     }
 
@@ -182,7 +181,6 @@ body {
     }
 
     .hero__icons {
-        
         justify-content: flex-end;
     }
 
