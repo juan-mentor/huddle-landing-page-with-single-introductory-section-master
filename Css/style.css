@@ -67,6 +67,7 @@ body {
     height: 50px;
     background-image: url("../images/logo.svg");
     background-size: contain;
+    background-repeat: no-repeat;
     margin-bottom: 8.7rem;
 }
 
@@ -84,19 +85,18 @@ body {
     text-align: center;
     line-height: 1.5;
     padding-bottom: 4.5rem;
-    text-align: center;
 }
 
 .hero__title {
     max-width: 520px;
-    font-size:calc(1.4rem + 2.5vw) ;
+    font-size: calc(1.4rem + 2.5vw) ;
     margin: 0  auto;
 }
 
 .hero__paragraph {
-    font-size:calc(1rem + 1.1vw) ;
+    font-size: calc(1rem + 1.1vw) ;
     max-width: 526px;
-    margin:3.6rem auto;
+    margin: 3.6rem auto;
     letter-spacing: 1px;
     padding: 0 0.625rem;
 }
@@ -112,6 +112,13 @@ body {
     background-color: #fff;
     color: var(--violet);
     text-align: center;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
+    transition: all 0.4s;
+}
+
+.hero__btn:hover {
+    background-color: var(--soft-magenta);
+    cursor: pointer;
 }
 
 .hero__icons {
@@ -127,6 +134,14 @@ body {
     border: 1px solid black;
     border-radius: 50%;
     filter: invert(1);
+    transition: all 0.3s;
+}
+
+.hero__icon:hover {
+    color: green;
+    border-color:green;
+    filter:invert(1);
+    cursor: pointer;
 }
 
 @media screen and (min-width: 75rem) {
@@ -149,8 +164,8 @@ body {
     }
 
     .hero__logo {
-        margin-bottom: 6.25rem;
         width: 205px;
+        margin-bottom: 6.25rem;
     }
 
     .hero__content {
@@ -167,10 +182,10 @@ body {
     }
 
     .hero__paragraph {
-        font-size: 1rem;
         max-width: 510px;
-        padding: 0;
+        font-size: 1rem;
         line-height: 1.8;
+        padding: 0;
         margin: 1.6rem;
     }
 
